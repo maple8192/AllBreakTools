@@ -1,0 +1,4 @@
+name: AllBreakTools
+version: '${project.version}'
+main: io.github.maple8192.allbreaktools.AllBreakTools
+api-version: 1.17
