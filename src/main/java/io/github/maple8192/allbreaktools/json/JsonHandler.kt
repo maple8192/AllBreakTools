@@ -11,6 +11,9 @@ object JsonHandler {
     fun exportJsonFile(plugin: Plugin) {
         val file = File(plugin.dataFolder, "data.json")
 
+        if (file.parentFile.exists().not()) {
+            file.parentFile.mkdir()
+        }
         if (file.exists().not()) {
             file.createNewFile()
         }
