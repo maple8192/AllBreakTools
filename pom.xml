@@ -6,7 +6,7 @@
 
     <groupId>io.github.maple8192</groupId>
     <artifactId>AllBreakTools</artifactId>
-    <version>1.18-1.0.1</version>
+    <version>1.18.1-1.0.0</version>
     <packaging>jar</packaging>
 
     <name>AllBreakTools</name>
@@ -108,7 +108,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.18-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
