@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+
+group = 'io.github.maple8192'
+version = '1.0.0'
+
+def javaVersion = 17
+
+configurations {
+    provided
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigotmc-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+dependencies {
+    provided 'org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT'
+    provided 'org.jetbrains.kotlin:kotlin-stdlib'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(javaVersion)
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = javaVersion.toString()
+
+    sourceSets.main.compileClasspath += configurations.provided
+}
+
+jar {
+    duplicatesStrategy 'exclude'
+
+    from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+}

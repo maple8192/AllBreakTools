@@ -65,7 +65,7 @@ class AllBreakEvent : Listener {
             loc.block.breakNaturally(tool)
 
             if (block.isOre() && block.getExpOnBroken() != 0) {
-                loc.world.spawn(loc, ExperienceOrb::class.java).experience += block.getExpOnBroken()
+                loc.world!!.spawn(loc, ExperienceOrb::class.java).experience += block.getExpOnBroken()
             }
             if (block.isLog()) {
                 for (dx in -3..3) {

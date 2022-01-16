@@ -1,5 +1,7 @@
 name: AllBreakTools
-version: '${project.version}'
 main: io.github.maple8192.allbreaktools.AllBreakTools
-api-version: 1.17
-softdepend: [KotlinPluginLib]
+version: '${version}'
+description: 設定したブロックを一括で破壊するプラグインです。
+api-version: 1.18
+depend: [ KotlinPluginLib ]
+authors: [ Maple8192 ]
