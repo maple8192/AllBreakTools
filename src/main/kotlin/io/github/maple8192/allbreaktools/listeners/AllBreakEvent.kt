@@ -49,7 +49,7 @@ class AllBreakEvent : Listener {
 
         if (block.isLog()) {
             for (dx in -3..3) {
-                for (dy in 0..1) {
+                for (dy in -1..1) {
                     for (dz in -3..3) {
                         val l = willBreakLocations[0].clone().add(dx.toDouble(), dy.toDouble(), dz.toDouble())
 
@@ -69,7 +69,7 @@ class AllBreakEvent : Listener {
             }
             if (block.isLog()) {
                 for (dx in -3..3) {
-                    for (dy in 0..1) {
+                    for (dy in -1..1) {
                         for (dz in -3..3) {
                             val l = loc.clone().add(dx.toDouble(), dy.toDouble(), dz.toDouble())
 
