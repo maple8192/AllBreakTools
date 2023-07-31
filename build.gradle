@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'io.github.maple8192'
-version = '1.0.1'
+version = '1.0.2'
 
 def javaVersion = 17
 
@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    provided 'org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT'
+    provided 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
     provided 'org.jetbrains.kotlin:kotlin-stdlib'
 }
 
